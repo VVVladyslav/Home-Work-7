@@ -6,9 +6,11 @@ public class Main {
 //        new DatabaseInitService(); // SECOND
 //        new DatabasePopulateService(); // THIRD
         DatabaseQueryService databaseQueryService = new DatabaseQueryService();
-//        databaseQueryService.findMaxProjectsClient();
-//        databaseQueryService.findMaxSalaryCountWorker();
-        //databaseQueryService.findLongestProject();
+        databaseQueryService.findMaxSalaryCountWorker();
+        databaseQueryService.findMaxProjectsClient();
+        databaseQueryService.findLongestProject();
+        databaseQueryService.findYoungestOldestPerson();
+        databaseQueryService.findProjectPrice();
 
         //DeletObjects deletObjects = new DeletObjects();
         //deletObjects.sendDelet();

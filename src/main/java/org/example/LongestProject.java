@@ -1,10 +1,12 @@
 package org.example;
 
+import java.sql.Date;
+
 public class LongestProject {
     private int id;
     private int idClient;
-    private int StartData;
-    private int FinishData;
+    private Date StartData;
+    private Date FinishData;
 
     public int getId() {
         return id;
@@ -22,19 +24,19 @@ public class LongestProject {
         this.idClient = idClient;
     }
 
-    public int getStartData() {
+    public Date getStartData() {
         return StartData;
     }
 
-    public void setStartData(int startData) {
+    public void setStartData(Date startData) {
         StartData = startData;
     }
 
-    public int getFinishData() {
+    public Date getFinishData() {
         return FinishData;
     }
 
-    public void setFinishData(int finishData) {
+    public void setFinishData(Date finishData) {
         FinishData = finishData;
     }
 }
