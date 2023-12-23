@@ -27,8 +27,9 @@ public class DatabaseQueryService {
                 maxSalaryCountWorker.setSalary(resultSet.getInt("salary"));
                 System.out.println("Client -> " + maxSalaryCountWorker.getName() + ", Salary -> " + maxSalaryCountWorker.getSalary());
             }
+            System.out.println();
 
-            connection.close();
+            //connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
@@ -51,8 +52,9 @@ public class DatabaseQueryService {
                 maxProjectCountClient.setProjectCount(resultSet.getInt("project_Count"));
                 System.out.println("Client -> " + maxProjectCountClient.getName() + ", ProjectCount -> " + maxProjectCountClient.getProjectCount());
             }
+            System.out.println();
 
-            connection.close();
+            //connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
@@ -78,11 +80,13 @@ public class DatabaseQueryService {
                 result.add(longestProject);
                 longestProject.setFinishData(resultSet.getDate("finish_date"));
                 result.add(longestProject);
-                System.out.println("ID -> " + longestProject.getId() + ", Client_Id -> " + longestProject.getIdClient() + ", StartData -> " + longestProject.getStartData()
+                System.out.println("ID -> " + longestProject.getId() + ", Client_Id -> " + longestProject.getIdClient()
+                        + ", StartData -> " + longestProject.getStartData()
                         + ", FinishData -> " + longestProject.getFinishData());
             }
+            System.out.println();
 
-            connection.close();
+            //connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
@@ -105,8 +109,9 @@ public class DatabaseQueryService {
                 youngestOldestPerson.setBirthday(resultSet.getDate("birthday"));
                 System.out.println("Name -> " + youngestOldestPerson.getName() + ", Birthdate -> " + youngestOldestPerson.getBirthday());
             }
+            System.out.println();
 
-            connection.close();
+            //connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
@@ -128,8 +133,9 @@ public class DatabaseQueryService {
                 projectPrice.setProjectCost(resultSet.getInt("project_cost"));
                 System.out.println("PROJECT_ID -> " + projectPrice.getProjectID() + ", PROJECT_COST -> " + projectPrice.getProjectCost());
             }
+            System.out.println();
 
-            connection.close();
+            //connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
