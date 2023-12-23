@@ -26,3 +26,4 @@ CREATE TABLE project_worker (
     FOREIGN KEY (PROJECT_ID) REFERENCES project(ID),
     FOREIGN KEY (WORKER_ID) REFERENCES worker(ID)
 );
+
