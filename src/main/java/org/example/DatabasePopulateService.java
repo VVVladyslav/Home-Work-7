@@ -12,7 +12,7 @@ public class DatabasePopulateService {
         Database database = new Database();
         StringBuilder fileContent = new StringBuilder();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sergei\\IdeaProjects\\Hm6i\\src\\main\\resources\\populate_db.sql"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/resources/populate_db.sql"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 fileContent.append(line).append("\n");
