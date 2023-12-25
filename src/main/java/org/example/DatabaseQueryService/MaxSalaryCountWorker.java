@@ -1,4 +1,4 @@
-package org.example;
+package org.example.DatabaseQueryService;
 
 public class MaxSalaryCountWorker {
     private String name;

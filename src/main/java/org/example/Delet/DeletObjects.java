@@ -1,4 +1,6 @@
-package org.example;
+package org.example.Delet;
+
+import org.example.Database;
 
 public class DeletObjects {
     public void sendDelet(){

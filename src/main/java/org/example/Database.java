@@ -1,17 +1,10 @@
 package org.example;
-import java.sql.ResultSet;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Database {
         public static final Database INSTANCE = new Database();
-
         private Connection connection;
-
-
-        protected Database(){
+        public Database(){
             try {
                 String connectionUrl = "jdbc:h2:./test";
                 connection = DriverManager.getConnection(connectionUrl);
@@ -20,38 +13,26 @@ public class Database {
                 e.printStackTrace();
             }
         }
-
         public static Database getInstance(){
             return INSTANCE;
         }
-
         public Connection getConnection(){
             return connection;
         }
-
-        public void close(){
-            try {
-                connection.close();
-            }catch (SQLException e){
-                e.printStackTrace();
-            }
-        }
-
         public int executeUpdate(String sql){
-            try (Statement st = connection.createStatement()){
-                return st.executeUpdate(sql);
-            }catch (Exception e){
-                e.printStackTrace();
-
+           try {
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+               return preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+               e.printStackTrace();
                 return -1;
-            }
+           }
         }
-
     public ResultSet executeQuery(String sql) {
         ResultSet resultSet = null;
         try {
-            Statement statement = connection.createStatement();
-            resultSet = statement.executeQuery(sql);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }

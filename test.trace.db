@@ -584,7 +584,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:16)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:10)
+	at org.example.DatabaseQueryService.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:10)
 	at org.example.Main.main(Main.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -619,7 +619,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:16)
-	at org.example.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:10)
+	at org.example.DatabaseQueryService.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:10)
 	at org.example.Main.main(Main.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -657,7 +657,7 @@ SELECT id, name FROM clients [90001-224]
 	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:196)
 	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
 	at org.example.Database.executeUpdate(Database.java:41)
-	at org.example.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:24)
+	at org.example.DatabaseQueryService.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:24)
 	at org.example.Main.main(Main.java:9)
 2023-12-16 20:28:36.581121+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Метод не разрешен для запросов. Используйте execute или executeQuery вместо executeUpdate
@@ -674,7 +674,7 @@ SELECT id, name FROM clients [90001-224]
 	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:196)
 	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
 	at org.example.Database.executeUpdate(Database.java:41)
-	at org.example.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:24)
+	at org.example.DatabaseQueryService.DatabaseQueryService.find_max_projects_client(DatabaseQueryService.java:24)
 	at org.example.Main.main(Main.java:9)
 2023-12-16 23:21:50.766307+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Ограничение "CONSTRAINT_5" уже существует
@@ -779,7 +779,7 @@ SELECT month_count, name FROM clients; [42122-224]
 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:94)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:20)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:20)
 	at org.example.Main.main(Main.java:11)
 2023-12-16 23:32:03.423860+02:00 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
@@ -803,7 +803,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -838,7 +838,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1194,7 +1194,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1415,7 +1415,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1559,7 +1559,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1703,7 +1703,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1847,7 +1847,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -1991,7 +1991,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2135,7 +2135,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2279,7 +2279,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2423,7 +2423,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2567,7 +2567,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:16)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2607,7 +2607,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:17)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:17)
 	at org.example.Main.main(Main.java:13)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2642,7 +2642,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:17)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:17)
 	at org.example.Main.main(Main.java:13)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2666,7 +2666,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:16:19.041340+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2678,7 +2678,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:16:57.621383+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2690,7 +2690,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:29)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:17:38.881147+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2702,7 +2702,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:30)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:30)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:18:17.014904+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2714,7 +2714,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:31)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:31)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:19:04.640669+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2726,7 +2726,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:31)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:31)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:22:56.690505+02:00 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
@@ -2750,7 +2750,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:18)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:18)
 	at org.example.Main.main(Main.java:13)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2785,7 +2785,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:18)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:18)
 	at org.example.Main.main(Main.java:13)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -2809,7 +2809,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:32)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:32)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:23:54.490562+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLDataException: Недопустимое значение "null" для параметра "SQL"
@@ -2821,7 +2821,7 @@ Invalid value "null" for parameter "SQL" [90008-224]
 	at org.h2.jdbc.JdbcConnection.translateSQL(JdbcConnection.java:1257)
 	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:93)
 	at org.example.Database.executeQuery(Database.java:54)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:32)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:32)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 14:31:02.930715+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "projectCount" не найден
@@ -2832,7 +2832,7 @@ Column "projectCount" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:27)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxProjectsClient(DatabaseQueryService.java:27)
 	at org.example.Main.main(Main.java:13)
 2023-12-22 15:17:10.069726+02:00 jdbc[4]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DELETE [*]ALL OBJECTS"; ожидалось "identifier"
@@ -2861,7 +2861,7 @@ Column "salary" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findMaxSalaryCountWorker(DatabaseQueryService.java:50)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxSalaryCountWorker(DatabaseQueryService.java:50)
 	at org.example.Main.main(Main.java:10)
 2023-12-23 22:37:59.927565+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "name" не найден
@@ -2872,7 +2872,7 @@ Column "name" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:71)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:71)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 22:39:05.896648+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "P.NAME" не найден
@@ -3046,7 +3046,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:63)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:63)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -3069,7 +3069,7 @@ Column "client_id" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:73)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:73)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 22:58:27.366582+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "start_data" не найден
@@ -3080,7 +3080,7 @@ Column "start_data" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 23:00:40.777066+02:00 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
@@ -3104,7 +3104,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:65)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:65)
 	at org.example.Main.main(Main.java:11)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -3127,7 +3127,7 @@ Column "start_data" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 23:02:48.694934+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "start_data" не найден
@@ -3138,7 +3138,7 @@ Column "start_data" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:77)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 23:17:06.624788+02:00 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
@@ -3162,7 +3162,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:95)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:95)
 	at org.example.Main.main(Main.java:12)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -3188,7 +3188,7 @@ Column "project_Count" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:337)
-	at org.example.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:106)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:106)
 	at org.example.Main.main(Main.java:12)
 2023-12-23 23:24:37.782871+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "project_Count" не найден
@@ -3199,7 +3199,7 @@ Column "project_Count" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:478)
-	at org.example.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:106)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findYoungestOldestPerson(DatabaseQueryService.java:106)
 	at org.example.Main.main(Main.java:12)
 2023-12-23 23:29:22.593538+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Столбец "start_data" не найден
@@ -3210,7 +3210,7 @@ Column "start_data" not found [42122-224]
 	at org.h2.message.DbException.get(DbException.java:199)
 	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
 	at org.h2.jdbc.JdbcResultSet.getDate(JdbcResultSet.java:478)
-	at org.example.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:78)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findLongestProject(DatabaseQueryService.java:78)
 	at org.example.Main.main(Main.java:11)
 2023-12-23 23:38:40.505277+02:00 database: flush
 org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
@@ -3234,7 +3234,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findProjectPrice(DatabaseQueryService.java:119)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findProjectPrice(DatabaseQueryService.java:119)
 	at org.example.Main.main(Main.java:13)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -3369,7 +3369,7 @@ General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/se
 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
 	at org.example.Database.<init>(Database.java:17)
 	at org.example.Database.<clinit>(Database.java:9)
-	at org.example.DatabaseQueryService.findMaxSalaryCountWorker(DatabaseQueryService.java:17)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxSalaryCountWorker(DatabaseQueryService.java:17)
 	at org.example.Main.main(Main.java:9)
 Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
 General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
@@ -3401,3 +3401,13 @@ The object is already closed [90007-224]
 2023-12-24 00:03:26.226992+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
 The object is already closed [90007-224]
+2023-12-25 18:06:45.216914+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]

@@ -1,12 +1,11 @@
-package org.example;
+package org.example.DatabaseQueryService;
+
+import org.example.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,14 +16,14 @@ public class DatabaseQueryService {
             Connection connection = Database.getInstance().getConnection();
             String sqlFilePath = "src/main/resources/find_max_salary_worker.sql";
             String sqlQuery = readSqlFile(sqlFilePath);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 MaxSalaryCountWorker maxSalaryCountWorker = new MaxSalaryCountWorker();
                 maxSalaryCountWorker.setName(resultSet.getString("name"));
-                result.add(maxSalaryCountWorker);
                 maxSalaryCountWorker.setSalary(resultSet.getInt("salary"));
+                result.add(maxSalaryCountWorker);
                 System.out.println("Client -> " + maxSalaryCountWorker.getName() + ", Salary -> " + maxSalaryCountWorker.getSalary());
             }
             System.out.println();
@@ -42,8 +41,8 @@ public class DatabaseQueryService {
             Connection connection = Database.getInstance().getConnection();
             String sqlFilePath = "src/main/resources/find_max_projects_client.sql";
             String sqlQuery = readSqlFile(sqlFilePath);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 MaxProjectCountClient maxProjectCountClient = new MaxProjectCountClient();
@@ -67,8 +66,8 @@ public class DatabaseQueryService {
             Connection connection = Database.getInstance().getConnection();
             String sqlFilePath = "src/main/resources/find_longest_project.sql";
             String sqlQuery = readSqlFile(sqlFilePath);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 LongestProject longestProject = new LongestProject();
@@ -99,8 +98,8 @@ public class DatabaseQueryService {
             Connection connection = Database.getInstance().getConnection();
             String sqlFilePath = "src/main/resources/find_youngest_eldest_workers.sql";
             String sqlQuery = readSqlFile(sqlFilePath);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 YoungestOldestPerson youngestOldestPerson = new YoungestOldestPerson();
@@ -123,8 +122,8 @@ public class DatabaseQueryService {
             Connection connection = Database.getInstance().getConnection();
             String sqlFilePath = "src/main/resources/print_project_prices.sql";
             String sqlQuery = readSqlFile(sqlFilePath);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 ProjectPrice projectPrice = new ProjectPrice();
@@ -135,7 +134,7 @@ public class DatabaseQueryService {
             }
             System.out.println();
 
-            //connection.close();
+            connection.close();
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
