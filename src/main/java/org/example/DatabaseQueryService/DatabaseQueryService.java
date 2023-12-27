@@ -24,9 +24,9 @@ public class DatabaseQueryService {
                 maxSalaryCountWorker.setName(resultSet.getString("name"));
                 maxSalaryCountWorker.setSalary(resultSet.getInt("salary"));
                 result.add(maxSalaryCountWorker);
-                System.out.println("Client -> " + maxSalaryCountWorker.getName() + ", Salary -> " + maxSalaryCountWorker.getSalary());
+                //System.out.println("Client -> " + maxSalaryCountWorker.getName() + ", Salary -> " + maxSalaryCountWorker.getSalary());
             }
-            System.out.println();
+            //System.out.println();
 
             //connection.close();
         } catch (SQLException | IOException e) {
@@ -49,9 +49,9 @@ public class DatabaseQueryService {
                 maxProjectCountClient.setName(resultSet.getString("name"));
                 result.add(maxProjectCountClient);
                 maxProjectCountClient.setProjectCount(resultSet.getInt("project_Count"));
-                System.out.println("Client -> " + maxProjectCountClient.getName() + ", ProjectCount -> " + maxProjectCountClient.getProjectCount());
+                //System.out.println("Client -> " + maxProjectCountClient.getName() + ", ProjectCount -> " + maxProjectCountClient.getProjectCount());
             }
-            System.out.println();
+            //System.out.println();
 
             //connection.close();
         } catch (SQLException | IOException e) {
@@ -79,11 +79,12 @@ public class DatabaseQueryService {
                 result.add(longestProject);
                 longestProject.setFinishData(resultSet.getDate("finish_date"));
                 result.add(longestProject);
-                System.out.println("ID -> " + longestProject.getId() + ", Client_Id -> " + longestProject.getIdClient()
+                /*System.out.println("ID -> " + longestProject.getId() + ", Client_Id -> " + longestProject.getIdClient()
                         + ", StartData -> " + longestProject.getStartData()
                         + ", FinishData -> " + longestProject.getFinishData());
+                 */
             }
-            System.out.println();
+            //System.out.println();
 
             //connection.close();
         } catch (SQLException | IOException e) {
@@ -106,9 +107,9 @@ public class DatabaseQueryService {
                 youngestOldestPerson.setName(resultSet.getString("name"));
                 result.add(youngestOldestPerson);
                 youngestOldestPerson.setBirthday(resultSet.getDate("birthday"));
-                System.out.println("Name -> " + youngestOldestPerson.getName() + ", Birthdate -> " + youngestOldestPerson.getBirthday());
+                //System.out.println("Name -> " + youngestOldestPerson.getName() + ", Birthdate -> " + youngestOldestPerson.getBirthday());
             }
-            System.out.println();
+            //System.out.println();
 
             //connection.close();
         } catch (SQLException | IOException e) {
@@ -130,9 +131,9 @@ public class DatabaseQueryService {
                 projectPrice.setProjectID(resultSet.getInt("project_id"));
                 result.add(projectPrice);
                 projectPrice.setProjectCost(resultSet.getInt("project_cost"));
-                System.out.println("PROJECT_ID -> " + projectPrice.getProjectID() + ", PROJECT_COST -> " + projectPrice.getProjectCost());
+                //System.out.println("PROJECT_ID -> " + projectPrice.getProjectID() + ", PROJECT_COST -> " + projectPrice.getProjectCost());
             }
-            System.out.println();
+            //System.out.println();
 
             connection.close();
         } catch (SQLException | IOException e) {

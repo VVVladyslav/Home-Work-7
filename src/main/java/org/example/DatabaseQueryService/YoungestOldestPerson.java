@@ -1,8 +1,4 @@
 package org.example.DatabaseQueryService;
-
-import org.h2.store.Data;
-
-import java.math.BigInteger;
 import java.sql.Date;
 
 public class YoungestOldestPerson {

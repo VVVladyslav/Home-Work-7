@@ -1,5 +1,9 @@
 package org.example;
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Database {
         public static final Database INSTANCE = new Database();
@@ -20,22 +24,22 @@ public class Database {
             return connection;
         }
         public int executeUpdate(String sql){
-           try {
-                PreparedStatement preparedStatement = connection.prepareStatement(sql);
-               return preparedStatement.executeUpdate();
-            } catch (SQLException e) {
-               e.printStackTrace();
+            try (Statement st = connection.createStatement()){
+                return st.executeUpdate(sql);
+            }catch (Exception e){
+                e.printStackTrace();
                 return -1;
-           }
+            }
         }
     public ResultSet executeQuery(String sql) {
         ResultSet resultSet = null;
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            resultSet = preparedStatement.executeQuery();
+            Statement statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return resultSet;
     }
+
 }
