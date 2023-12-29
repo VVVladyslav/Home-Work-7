@@ -9,10 +9,10 @@ public class Main {
         //new DatabasePopulateService(); // THIRD
         DatabaseQueryService databaseQueryService = new DatabaseQueryService();
         databaseQueryService.findMaxSalaryCountWorker();
-        databaseQueryService.findMaxProjectsClient();
+        databaseQueryService.findMaxProjectsClient(1);
         databaseQueryService.findLongestProject();
-        databaseQueryService.findYoungestOldestPerson();
-        databaseQueryService.findProjectPrice();
+        databaseQueryService.findYoungestOldestPerson("OLDEST");
+        databaseQueryService.findProjectPrice(32000 ,102000);
 
         //DeletObjects deletObjects = new DeletObjects();
         //deletObjects.sendDelet();

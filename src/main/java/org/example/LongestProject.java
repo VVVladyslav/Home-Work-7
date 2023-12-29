@@ -1,4 +1,4 @@
-package org.example.DatabaseQueryService;
+package org.example;
 
 import java.sql.Date;
 

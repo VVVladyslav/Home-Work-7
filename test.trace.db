@@ -3411,3 +3411,41 @@ CREATE TABLE worker (
     LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
     SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
 ) [42101-224]
+2023-12-29 19:49:01.411053+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM [*]? \000aWHERE SALARY = (SELECT MAX(SALARY) FROM ?);"; ожидалось "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]? \000aWHERE SALARY = (SELECT MAX(SALARY) FROM ?);"; expected "identifier"; SQL statement:
+SELECT * FROM ? 
+WHERE SALARY = (SELECT MAX(SALARY) FROM ?); [42001-224]
+2023-12-29 19:49:27.538340+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM [*]? \000aWHERE SALARY = (SELECT MAX(SALARY) FROM worker);"; ожидалось "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]? \000aWHERE SALARY = (SELECT MAX(SALARY) FROM worker);"; expected "identifier"; SQL statement:
+SELECT * FROM ? 
+WHERE SALARY = (SELECT MAX(SALARY) FROM worker); [42001-224]
+2023-12-29 19:52:03.258893+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT ?(SALARY) FROM worker); [42001-224]
+2023-12-29 19:52:49.100480+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT [*]%s(SALARY) FROM worker);"; ожидалось "DISTINCT, ALL, *, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT [*]%s(SALARY) FROM worker);"; expected "DISTINCT, ALL, *, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT %s(SALARY) FROM worker); [42001-224]
+2023-12-29 19:53:41.857636+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT [*]%s(SALARY) FROM worker);"; ожидалось "DISTINCT, ALL, *, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT [*]%s(SALARY) FROM worker);"; expected "DISTINCT, ALL, *, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT %s(SALARY) FROM worker); [42001-224]
+2023-12-29 19:57:44.714986+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT ?(SALARY) FROM worker); [42001-224]
+2023-12-29 19:57:57.404726+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT ? [*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT ? [*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT ? (SALARY) FROM worker); [42001-224]
+2023-12-29 19:58:08.397614+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT '?'[*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT '?'[*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT '?'(SALARY) FROM worker); [42001-224]
+2023-12-29 19:58:59.660520+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
+Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
+SELECT * FROM worker WHERE SALARY = (SELECT ?(SALARY) FROM worker); [42001-224]
