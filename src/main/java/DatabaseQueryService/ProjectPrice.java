@@ -1,4 +1,4 @@
-package org.example.DatabaseQueryService;
+package DatabaseQueryService;
 
 public class ProjectPrice {
     private int projectID;

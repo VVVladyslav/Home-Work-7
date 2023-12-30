@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.DatabaseQueryService.DatabaseQueryService;
-import org.example.Delet.DeletObjects;
+import DatabaseQueryService.DatabaseQueryService;
+import DatabaseQueryService.Delet.DeletObjects;
 
 public class Main {
     public static void main(String[] args){

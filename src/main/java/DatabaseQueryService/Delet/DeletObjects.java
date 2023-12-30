@@ -1,4 +1,4 @@
-package org.example.Delet;
+package DatabaseQueryService.Delet;
 
 import org.example.Database;
 

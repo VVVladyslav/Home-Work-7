@@ -1,4 +1,4 @@
-package org.example.DatabaseQueryService;
+package DatabaseQueryService;
 import java.sql.Date;
 
 public class YoungestOldestPerson {
