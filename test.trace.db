@@ -3449,3 +3449,486 @@ SELECT * FROM worker WHERE SALARY = (SELECT '?'(SALARY) FROM worker); [42001-224
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; ожидалось "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"
 Syntax error in SQL statement "SELECT * FROM worker WHERE SALARY = (SELECT ?[*](SALARY) FROM worker);"; expected "[, ., ::, AT, FORMAT, *, /, %, +, -, ||, NOT, IS, ILIKE, REGEXP, AND, OR, AS, ,, FROM, WHERE, GROUP BY, HAVING, WINDOW, QUALIFY, INTERSECT, UNION, EXCEPT, ORDER BY, OFFSET, FETCH, FOR, )"; SQL statement:
 SELECT * FROM worker WHERE SALARY = (SELECT ?(SALARY) FROM worker); [42001-224]
+2023-12-30 21:50:08.744230+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Данный метод не разрешен для PreparedStatement; используйте Statement.
+This method is not allowed for a prepared statement; use a regular statement instead. [90130-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:185)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:30)
+	at org.example.Main.main(Main.java:17)
+2023-12-30 21:51:03.495057+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Данный метод не разрешен для PreparedStatement; используйте Statement.
+This method is not allowed for a prepared statement; use a regular statement instead. [90130-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:185)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:147)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:32)
+	at org.example.Main.main(Main.java:17)
+2023-12-30 21:51:34.707536+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 12, 2: 'John', 3: DATE '2020-07-11', 4: 'Trainee', 5: 800}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 12, 2: 'John', 3: DATE '2020-07-11', 4: 'Trainee', 5: 800}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 12, 2: 'John', 3: DATE '2020-07-11', 4: 'Trainee', 5: 800} [42001-224]
+2023-12-30 21:51:34.711519+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 13, 2: 'Jane', 3: DATE '2001-02-12', 4: 'Junior', 5: 900}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 13, 2: 'Jane', 3: DATE '2001-02-12', 4: 'Junior', 5: 900}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 13, 2: 'Jane', 3: DATE '2001-02-12', 4: 'Junior', 5: 900} [42001-224]
+2023-12-30 21:51:34.712518+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 14, 2: 'Jim', 3: DATE '2005-02-13', 4: 'Middle', 5: 1800}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 14, 2: 'Jim', 3: DATE '2005-02-13', 4: 'Middle', 5: 1800}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 14, 2: 'Jim', 3: DATE '2005-02-13', 4: 'Middle', 5: 1800} [42001-224]
+2023-12-30 21:51:34.713518+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 15, 2: 'Joe', 3: DATE '2010-05-14', 4: 'Senior', 5: 1900}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 15, 2: 'Joe', 3: DATE '2010-05-14', 4: 'Senior', 5: 1900}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 15, 2: 'Joe', 3: DATE '2010-05-14', 4: 'Senior', 5: 1900} [42001-224]
+2023-12-30 21:51:34.714517+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 16, 2: 'Jamal', 3: DATE '2010-10-15', 4: 'Senior', 5: 1000}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 16, 2: 'Jamal', 3: DATE '2010-10-15', 4: 'Senior', 5: 1000}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 16, 2: 'Jamal', 3: DATE '2010-10-15', 4: 'Senior', 5: 1000} [42001-224]
+2023-12-30 21:51:34.715516+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 17, 2: 'Jocker', 3: DATE '2009-10-16', 4: 'Senior', 5: 1100}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 17, 2: 'Jocker', 3: DATE '2009-10-16', 4: 'Senior', 5: 1100}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 17, 2: 'Jocker', 3: DATE '2009-10-16', 4: 'Senior', 5: 1100} [42001-224]
+2023-12-30 21:51:34.716516+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 18, 2: 'Janister', 3: DATE '2007-11-17', 4: 'Senior', 5: 1200}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 18, 2: 'Janister', 3: DATE '2007-11-17', 4: 'Senior', 5: 1200}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 18, 2: 'Janister', 3: DATE '2007-11-17', 4: 'Senior', 5: 1200} [42001-224]
+2023-12-30 21:51:34.717530+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 19, 2: 'Jupiter', 3: DATE '2004-12-18', 4: 'Middle', 5: 5000}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 19, 2: 'Jupiter', 3: DATE '2004-12-18', 4: 'Middle', 5: 5000}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 19, 2: 'Jupiter', 3: DATE '2004-12-18', 4: 'Middle', 5: 5000} [42001-224]
+2023-12-30 21:51:34.719514+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 20, 2: 'Jimison', 3: DATE '2003-03-19', 4: 'Trainee', 5: 5200}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 20, 2: 'Jimison', 3: DATE '2003-03-19', 4: 'Trainee', 5: 5200}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 20, 2: 'Jimison', 3: DATE '2003-03-19', 4: 'Trainee', 5: 5200} [42001-224]
+2023-12-30 21:51:34.720514+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 21, 2: 'Jared', 3: DATE '2000-01-13', 4: 'Middle', 5: 1300}"; ожидалось "PREPARE"
+Syntax error in SQL statement "[*]prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 21, 2: 'Jared', 3: DATE '2000-01-13', 4: 'Middle', 5: 1300}"; expected "PREPARE"; SQL statement:
+prep0: INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) {1: 21, 2: 'Jared', 3: DATE '2000-01-13', 4: 'Middle', 5: 1300} [42001-224]
+2023-12-30 22:01:12.281624+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:35)
+	at org.example.Main.main(Main.java:18)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:01:20.967790+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Неверное количество столбцов
+Column count does not match; SQL statement:
+INSERT INTO PUBLIC.PROJECT VALUES (?, ?) [21002-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:316)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:37)
+	at org.example.Main.main(Main.java:18)
+2023-12-30 22:19:04.248773+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-12-30 22:19:04.259767+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:21:10.464586+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:20)
+	at org.example.Main.main(Main.java:27)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:24:43.861566+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabasePopulateService.main(DatabasePopulateService.java:20)
+	at org.example.Main.main(Main.java:27)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:35:14.100657+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "WORKER" not found (this database is empty); SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [42104-224]
+2023-12-30 22:36:00.120814+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-12-30 22:36:00.133807+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:43:48.056091+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-12-30 22:43:48.068084+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:25)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:45:25.849358+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:45:25.852356+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:45:25.852356+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:45:25.853356+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:45:25.853356+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:46:02.664771+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseQueryService.DatabaseQueryService.findMaxSalaryCountWorker(DatabaseQueryService.java:16)
+	at org.example.Main.main(Main.java:21)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-12-30 22:48:00.859673+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:48:00.862687+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:48:00.862687+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:48:00.863674+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:48:00.864686+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-224]
+2023-12-30 22:49:22.623529+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT * FROM PROJECT PROJECT_WORKER [*]WORKER"
+Syntax error in SQL statement "SELECT * FROM PROJECT PROJECT_WORKER [*]WORKER"; SQL statement:
+SELECT * FROM PROJECT PROJECT_WORKER WORKER [42000-224]
