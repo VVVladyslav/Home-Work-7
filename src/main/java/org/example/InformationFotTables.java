@@ -1,6 +1,6 @@
 package org.example;
 
-public class DataVariables {
+public class InformationFotTables {
     public static final int[] ids = {12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
     public static final String[] names = {"John", "Jane", "Jim", "Joe", "Jamal", "Jocker", "Janister", "Jupiter", "Jimison", "Jared"};
     public static final String[] birthdates = {"2020-07-11", "2001-02-12", "2005-02-13", "2010-05-14", "2010-10-15", "2009-10-16", "2007-11-17", "2004-12-18", "2003-03-19", "2000-01-13"};

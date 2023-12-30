@@ -6,16 +6,16 @@ import DatabaseQueryService.Delet.DeletObjects;
 public class Main {
     public static void main(String[] args){
 
-        DataVariables dataVariables = new DataVariables();
+        InformationFotTables informationFotTables = new InformationFotTables();
 
         new DatabaseInitService(); // SECOND
 
         DatabasePopulateService databasePopulateService = new DatabasePopulateService(); // THIRD
         databasePopulateService.main(
-                dataVariables.ids, dataVariables.names, dataVariables.birthdates, dataVariables.positions, dataVariables.salaries,
-                dataVariables.clientNum, dataVariables.clientName,
-                dataVariables.projectIds, dataVariables.clientIds, dataVariables.startDates, dataVariables.endDates,
-                dataVariables.projectIdsForWorker, dataVariables.workerIds
+                informationFotTables.ids, informationFotTables.names, informationFotTables.birthdates, informationFotTables.positions, informationFotTables.salaries,
+                informationFotTables.clientNum, informationFotTables.clientName,
+                informationFotTables.projectIds, informationFotTables.clientIds, informationFotTables.startDates, informationFotTables.endDates,
+                informationFotTables.projectIdsForWorker, informationFotTables.workerIds
         );
 
 
