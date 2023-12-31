@@ -1,4 +1,4 @@
-package DatabaseQueryService;
+package org.example.DatabaseQueryService;
 
 public class MaxProjectCountClient {
     private String name;

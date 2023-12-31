@@ -1,17 +1,8 @@
 package org.example;
-import org.example.Database;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DatabasePopulateService {
-    public static void insertIntoWorker(int[] ids, String[] names,
-                                        String[] birthdates,
-                                        String[] positions, int[] salaries) {
+    public static void insertIntoWorker(String[] worker) {
         try {
             Connection connection = Database.getInstance().getConnection();
 
@@ -20,12 +11,13 @@ public class DatabasePopulateService {
 
             sqlQuery = "INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
-            for (int i = 0; i < ids.length; i++) {
-                queryStatement.setInt(1, ids[i]);
-                queryStatement.setString(2, names[i]);
-                queryStatement.setDate(3, Date.valueOf(birthdates[i]));
-                queryStatement.setString(4, positions[i]);
-                queryStatement.setInt(5, salaries[i]);
+            for (int i = 0; i < 1; i++) {
+                queryStatement.setInt(1, Integer.parseInt(worker[0]));
+                queryStatement.setString(2, worker[1]);
+                queryStatement.setDate(3, java.sql.Date.valueOf(worker[2]));
+                queryStatement.setString(4, worker[3]);
+                queryStatement.setInt(5, Integer.parseInt(worker[4]));
+
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
@@ -34,7 +26,7 @@ public class DatabasePopulateService {
         }
     }
 
-    public static void insertIntoClient(int[] clientNum, String[] clientName) {
+    public static void insertIntoClient(String[] client) {
         try {
             Connection connection = Database.getInstance().getConnection();
 
@@ -43,9 +35,9 @@ public class DatabasePopulateService {
 
             sqlQuery = "INSERT INTO PUBLIC.CLIENT VALUES (?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
-            for (int i = 0; i < clientNum.length; i++) {
-                queryStatement.setInt(1, clientNum[i]);
-                queryStatement.setString(2, clientName[i]);
+            for (int i = 0; i < 1; i++) {
+                queryStatement.setInt(1, Integer.parseInt(client[0]));
+                queryStatement.setString(2, client[1]);
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
@@ -54,9 +46,7 @@ public class DatabasePopulateService {
         }
     }
 
-    public static void insertIntoProject(int[] projectIds,
-                                         int[] clientIds, String[] startDates,
-                                         String[] endDates) {
+    public static void insertIntoProject(String[] project) {
         try {
             Connection connection = Database.getInstance().getConnection();
 
@@ -65,11 +55,11 @@ public class DatabasePopulateService {
 
             sqlQuery = "INSERT INTO PUBLIC.PROJECT VALUES (?, ?, ?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
-            for (int i = 0; i < projectIds.length; i++) {
-                queryStatement.setInt(1, projectIds[i]);
-                queryStatement.setInt(2, clientIds[i]);
-                queryStatement.setDate(3, Date.valueOf(startDates[i]));
-                queryStatement.setDate(4, Date.valueOf(endDates[i]));
+            for (int i = 0; i < 1; i++) {
+                queryStatement.setInt(1, Integer.parseInt(project[0]));
+                queryStatement.setInt(2, Integer.parseInt(project[1]));
+                queryStatement.setDate(3, java.sql.Date.valueOf(project[2]));
+                queryStatement.setDate(4, java.sql.Date.valueOf(project[3]));
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
@@ -78,7 +68,7 @@ public class DatabasePopulateService {
         }
     }
 
-    public static void insertIntoProjectWorker(int[] projectIdsForWorker, int[] workerIds) {
+    public static void insertIntoProjectWorker(String[] projectWorker) {
         try {
             Connection connection = Database.getInstance().getConnection();
 
@@ -87,9 +77,9 @@ public class DatabasePopulateService {
 
             sqlQuery = "INSERT INTO PUBLIC.PROJECT_WORKER VALUES (?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
-            for (int i = 0; i < projectIdsForWorker.length; i++) {
-                queryStatement.setInt(1, projectIdsForWorker[i]);
-                queryStatement.setInt(2, workerIds[i]);
+            for (int i = 0; i < 1; i++) {
+                queryStatement.setInt(1, Integer.parseInt(projectWorker[0]));
+                queryStatement.setInt(2, Integer.parseInt(projectWorker[1]));
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();

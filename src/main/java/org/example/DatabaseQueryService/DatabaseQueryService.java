@@ -1,4 +1,4 @@
-package DatabaseQueryService;
+package org.example.DatabaseQueryService;
 
 import org.example.*;
 
