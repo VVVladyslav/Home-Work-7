@@ -9,12 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabasePopulateService {
-
-    public static void main(int[] ids, String[] names, String[] birthdates,
-                            String[] positions, int[] salaries, int[] clientNum,
-                            String[] clientName, int[] projectIds,
-                            int[] clientIds, String[] startDates, String[] endDates,
-                            int[] projectIdsForWorker, int[] workerIds) {
+    public static void insertIntoWorker(int[] ids, String[] names,
+                                        String[] birthdates,
+                                        String[] positions, int[] salaries) {
         try {
             Connection connection = Database.getInstance().getConnection();
 
@@ -32,6 +29,17 @@ public class DatabasePopulateService {
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertIntoClient(int[] clientNum, String[] clientName) {
+        try {
+            Connection connection = Database.getInstance().getConnection();
+
+            String sqlQuery;
+            PreparedStatement queryStatement;
 
             sqlQuery = "INSERT INTO PUBLIC.CLIENT VALUES (?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
@@ -41,6 +49,19 @@ public class DatabasePopulateService {
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertIntoProject(int[] projectIds,
+                                         int[] clientIds, String[] startDates,
+                                         String[] endDates) {
+        try {
+            Connection connection = Database.getInstance().getConnection();
+
+            String sqlQuery;
+            PreparedStatement queryStatement;
 
             sqlQuery = "INSERT INTO PUBLIC.PROJECT VALUES (?, ?, ?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
@@ -52,6 +73,17 @@ public class DatabasePopulateService {
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void insertIntoProjectWorker(int[] projectIdsForWorker, int[] workerIds) {
+        try {
+            Connection connection = Database.getInstance().getConnection();
+
+            String sqlQuery;
+            PreparedStatement queryStatement;
 
             sqlQuery = "INSERT INTO PUBLIC.PROJECT_WORKER VALUES (?, ?)";
             queryStatement = connection.prepareStatement(sqlQuery);
@@ -61,8 +93,7 @@ public class DatabasePopulateService {
                 queryStatement.addBatch();
             }
             queryStatement.executeBatch();
-            //connection.close();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
