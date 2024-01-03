@@ -4259,3 +4259,776 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/
 	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
 	... 15 more
+2024-01-01 20:26:50.947790+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "[*]NAME"
+Syntax error in SQL statement "[*]NAME"; SQL statement:
+NAME [42000-224]
+2024-01-01 20:27:06.330148+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.197165+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.342096+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.481694+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.608471+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.756101+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:07.876096+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:08.022096+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:08.181985+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:08.328095+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:08.488949+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-01 20:27:08.799834+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"
+Syntax error in SQL statement "SELECT name FROM client WHERE name LIKE Oleg [*]Cl"; SQL statement:
+SELECT name FROM client WHERE name LIKE Oleg Cl [42000-224]
+2024-01-03 00:03:27.771521+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2024-01-03 00:03:27.787408+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2024-01-03 00:06:55.390558+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
+2024-01-03 00:08:43.371791+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
+2024-01-03 00:10:27.898907+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Database.<clinit>(Database.java:9)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2024-01-03 00:10:27.910898+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.DatabaseInitService.main(DatabaseInitService.java:14)
+	at org.example.DatabaseInitService.<init>(DatabaseInitService.java:9)
+	at org.example.Main.main(Main.java:16)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2024-01-03 00:10:27.923891+02:00 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at org.example.Database.<init>(Database.java:14)
+	at org.example.Delet.DeletObjects.sendDelet(DeletObjects.java:7)
+	at org.example.Main.main(Main.java:100)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]" [50000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/sergei/IdeaProjects/Hm6i/test.mv.db [2.2.224/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2024-01-03 00:10:33.840656+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
+2024-01-03 18:47:03.919206+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
+2024-01-03 18:53:45.102749+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
+2024-01-03 18:53:45.110745+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:31)
+2024-01-03 18:53:45.111729+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:32)
+2024-01-03 18:53:45.113727+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:33)
+2024-01-03 18:53:45.114727+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:34)
+2024-01-03 18:53:45.115726+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:35)
+2024-01-03 18:53:45.116726+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:36)
+2024-01-03 18:53:45.118725+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:37)
+2024-01-03 18:53:45.119724+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:38)
+2024-01-03 18:53:45.121725+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:39)
+2024-01-03 18:53:45.122723+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:40)
+2024-01-03 18:53:52.151112+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:31)
+2024-01-03 18:53:52.155111+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:32)
+2024-01-03 18:53:52.156095+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:33)
+2024-01-03 18:53:52.157110+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:34)
+2024-01-03 18:53:52.158094+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:35)
+2024-01-03 18:53:52.159095+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:36)
+2024-01-03 18:53:52.160095+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:37)
+2024-01-03 18:53:52.161093+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:38)
+2024-01-03 18:53:52.163093+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:39)
+2024-01-03 18:53:52.164092+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:40)
+2024-01-03 18:54:15.754810+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:31)
+2024-01-03 18:54:15.758807+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:32)
+2024-01-03 18:54:15.759806+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:33)
+2024-01-03 18:54:15.760806+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:34)
+2024-01-03 18:54:15.762804+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:35)
+2024-01-03 18:54:15.763804+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:36)
+2024-01-03 18:54:15.764804+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:37)
+2024-01-03 18:54:15.766802+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:38)
+2024-01-03 18:54:15.767802+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:39)
+2024-01-03 18:54:15.768802+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Параметр "#5" не установлен
+Parameter "#5" is not set; SQL statement:
+INSERT INTO PUBLIC.WORKER VALUES (?, ?, ?, ?, ?) [90012-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:658)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:75)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:207)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:159)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:216)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:174)
+	at org.example.DatabasePopulateService.insertIntoWorker(DatabasePopulateService.java:24)
+	at org.example.Main.main(Main.java:40)
+2024-01-03 18:57:11.937425+02:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "WORKER" уже существует
+Table "WORKER" already exists; SQL statement:
+CREATE TABLE worker (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    NAME VARCHAR(1000) NOT NULL CHECK (LENGTH(NAME) >= 2 AND LENGTH(NAME) <= 1000),
+    BIRTHDAY DATE CHECK (YEAR(BIRTHDAY) > 1900),
+    LEVEL VARCHAR(20) NOT NULL CHECK (LEVEL IN ('Trainee', 'Junior', 'Middle', 'Senior')),
+    SALARY INT CHECK (SALARY >= 100 AND SALARY <= 100000)
+) [42101-224]
