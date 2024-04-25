@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseQueryService {
+    
     public List<MaxSalaryCountWorker> findMaxSalaryCountWorker(){
         List<MaxSalaryCountWorker> result = new ArrayList<>();
+        
         try {
             Connection connection = Database.getInstance().getConnection();
             String sqlQuery = "SELECT * FROM worker WHERE SALARY = (SELECT MAX(SALARY) FROM worker);";
@@ -20,17 +22,12 @@ public class DatabaseQueryService {
                 maxSalaryCountWorker.setName(resultSet.getString("name"));
                 maxSalaryCountWorker.setSalary(resultSet.getInt("salary"));
                 result.add(maxSalaryCountWorker);
-                //System.out.println("Client -> " + maxSalaryCountWorker.getName() + ", Salary -> " + maxSalaryCountWorker.getSalary());
             }
-            //System.out.println();
-
-            //connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
     }
-    ////////////////////////////////////////////////////////////////////////////////////
     public List<MaxProjectCountClient> findMaxProjectsClient(Object threshold) {
         List<MaxProjectCountClient> result = new ArrayList<>();
         try {
@@ -50,19 +47,17 @@ public class DatabaseQueryService {
                 maxProjectCountClient.setName(resultSet.getString("name"));
                 maxProjectCountClient.setProjectCount(resultSet.getInt("PROJECT_COUNT"));
                 result.add(maxProjectCountClient);
-                //System.out.println("Client -> " + maxProjectCountClient.getName() + ", ProjectCount -> " + maxProjectCountClient.getProjectCount());
             }
-
-            // connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
     }
-
-    ////////////////////////////////////////////////////////////////////////////////////
+    
     public List<LongestProject> findLongestProject(){
+        
         List<LongestProject> result = new ArrayList<>();
+        
         try {
             Connection connection = Database.getInstance().getConnection();
             String sqlQuery = "SELECT *\n" +
@@ -84,22 +79,17 @@ public class DatabaseQueryService {
                 result.add(longestProject);
                 longestProject.setFinishData(resultSet.getDate("finish_date"));
                 result.add(longestProject);
-                /*System.out.println("ID -> " + longestProject.getId() + ", Client_Id -> " + longestProject.getIdClient()
-                        + ", StartData -> " + longestProject.getStartData()
-                        + ", FinishData -> " + longestProject.getFinishData());
-                 */
             }
-            //System.out.println();
-
-            //connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
     }
-/////////////////////////////////////////////////////
+    
 public List<YoungestOldestPerson> findYoungestOldestPerson(String type) {
+    
     List<YoungestOldestPerson> result = new ArrayList<>();
+    
     try {
         Connection connection = Database.getInstance().getConnection();
         String sqlQuery = "SELECT ?, NAME, BIRTHDAY " +
@@ -122,17 +112,17 @@ public List<YoungestOldestPerson> findYoungestOldestPerson(String type) {
             youngestOldestPerson.setName(resultSet.getString("name"));
             youngestOldestPerson.setBirthday(resultSet.getDate("birthday"));
             result.add(youngestOldestPerson);
-            //System.out.println("Name -> " + youngestOldestPerson.getName() + ", Birthdate -> " + youngestOldestPerson.getBirthday());
         }
 
-        // connection.close();
     } catch (SQLException e) {
         e.printStackTrace();
     }
     return result;
 }
 public List<ProjectPrice> findProjectPrice(int minProjectCost, int maxProjectCost) {
+    
     List<ProjectPrice> result = new ArrayList<>();
+    
     try {
         Connection connection = Database.getInstance().getConnection();
         String sqlQuery = "SELECT p.ID AS PROJECT_ID, " +
@@ -154,7 +144,6 @@ public List<ProjectPrice> findProjectPrice(int minProjectCost, int maxProjectCos
             projectPrice.setProjectID(resultSet.getInt("project_id"));
             projectPrice.setProjectCost(resultSet.getInt("project_cost"));
             result.add(projectPrice);
-            //System.out.println("PROJECT_ID -> " + projectPrice.getProjectID() + ", PROJECT_COST -> " + projectPrice.getProjectCost());
         }
 
         connection.close();
@@ -163,16 +152,4 @@ public List<ProjectPrice> findProjectPrice(int minProjectCost, int maxProjectCos
     }
     return result;
 }
-    /*private String readSqlFile(String filePath) throws IOException {
-        StringBuilder query = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                query.append(line).append("\n");
-            }
-        }
-        return query.toString();
-    }
-     */
 }
-
