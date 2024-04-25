@@ -10,12 +10,13 @@ import org.example.InsertsInto.Worker;
 import java.time.LocalDate;
 
 public class Main {
+    
     public static void main(String[] args){
 
-        new DatabaseInitService(); // SECOND
+        new DatabaseInitService();
         DatabasePopulateService databasePopulateService = new DatabasePopulateService();
 
-        // Worker worker = new Worker();
+        Worker worker = new Worker();
         LocalDate worker1_Birthday = LocalDate.of(2020,07,11);
         LocalDate worker2_Birthday = LocalDate.of(2001,02,12);
         LocalDate worker3_Birthday = LocalDate.of(2005,02,13);
@@ -26,6 +27,7 @@ public class Main {
         LocalDate worker8_Birthday = LocalDate.of( 2004,12,18);
         LocalDate worker9_Birthday = LocalDate.of(2003,03,19);
         LocalDate worker10_Birthday = LocalDate.of( 2000,01,13);
+        
         databasePopulateService.insertIntoWorker(new Worker(12,"John",worker1_Birthday,"Trainee",800));
         databasePopulateService.insertIntoWorker(new Worker(13,"Jane",worker2_Birthday,"Junior",900));
         databasePopulateService.insertIntoWorker(new Worker(14,"Jim",worker3_Birthday,"Middle",1800));
@@ -37,14 +39,14 @@ public class Main {
         databasePopulateService.insertIntoWorker(new Worker(20,"Jupiter",worker9_Birthday,"Trainee",5200));
         databasePopulateService.insertIntoWorker(new Worker(21,"Jimison",worker10_Birthday,"Middle",1300));
 
-        //Client client = new Client();
+        Client client = new Client();
         databasePopulateService.insertIntoClient(new Client(1, "Oleg Cl"));
         databasePopulateService.insertIntoClient(new Client(2, "Olyena Cl"));
         databasePopulateService.insertIntoClient(new Client(3, "Oksana Cl"));
         databasePopulateService.insertIntoClient(new Client(4, "Oman Cl"));
         databasePopulateService.insertIntoClient(new Client(5, "Omrika Cl"));
 
-        //Project project = new Project();
+        Project project = new Project();
         LocalDate startDataProject1 = LocalDate.of(2000,01,01 );
         LocalDate finishDataProject1 = LocalDate.of(2001,06,30);
 
@@ -66,7 +68,7 @@ public class Main {
         databasePopulateService.insertIntoProject(new Project(4, 4,startDataProject4, finishDataProject4));
         databasePopulateService.insertIntoProject(new Project(5, 5,startDataProject5, finishDataProject5));
 
-        //ProjectWorkerAdd projectWorker = new ProjectWorker();
+        ProjectWorkerAdd projectWorker = new ProjectWorker();
         databasePopulateService.insertIntoProjectWorker(new ProjectWorker(1, 12));
         databasePopulateService.insertIntoProjectWorker(new ProjectWorker(2, 13));
         databasePopulateService.insertIntoProjectWorker(new ProjectWorker(2, 14));
@@ -86,6 +88,6 @@ public class Main {
         databaseQueryService.findProjectPrice(32000 ,102000);
 
         DeletObjects deletObjects = new DeletObjects();
-        //deletObjects.sendDelet();
+        deletObjects.sendDelet();
     }
 }
